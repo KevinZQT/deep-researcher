@@ -95,17 +95,6 @@ flowchart TD
 - Git
 - A Gemini API key and access to a model that supports Google Search grounding and structured output
 
-### 1. Clone the repository
-
-Replace `YOUR_USERNAME` with the repository owner's GitHub username:
-
-```bash
-git clone https://github.com/YOUR_USERNAME/deep-researcher.git deep_researcher
-cd deep_researcher
-```
-
-The local folder is intentionally named `deep_researcher` so it can be used as a Python package. Keep this name when following the commands below; the GitHub repository can still be named `deep-researcher`.
-
 ### 2. Create a virtual environment
 
 **Windows (PowerShell)**

@@ -1,0 +1,337 @@
+@keyframes gradientBG {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+/* Animate the global background with subtle gradient */
+html, body {
+    /* Keep smooth scrolling */
+    scroll-behavior: smooth;
+    /* Replace radial dark gray with animated multi-stop gradient */
+    background: linear-gradient(45deg, #1a1a2e, #08192f, #0f2351, #1a1a2e);
+    background-size: 400% 400%;
+    animation: gradientBG 20s ease infinite;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    line-height: 1.6;
+    background-color: #1e272e;
+    background-image: radial-gradient(circle at 30% 20%, #151520 0%, #080808 80%);
+    background-attachment: fixed;
+    position: relative !important;
+    background-color: #121212 !important;
+    padding-top: 40px;
+}
+
+.landing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 40px);
+    text-align: center;
+    padding: 0 20px;
+    margin-top: 0; /* Removed top margin that compensated for the top bar */
+}
+
+.landing h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.gradient-text {
+    background-image: linear-gradient(to right, #2dd4bf, #0d9488);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.landing p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    max-width: 1000px;
+    padding: 0 25px 0 25px;
+    margin: auto auto 2rem auto;
+}
+
+.landing-description {
+    font-size: 20px;
+}
+
+.container {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: all .3s ease-in-out;
+    margin: auto auto 180px auto;
+}
+
+.container:hover {
+    /* Uncomment this to enable hover zoom effect (transform scale effect).
+        This is not recommended because it can be obnoxious on desktop, and straight up unusable on mobile. */
+    /* transform: scale(1.01); */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Glass-style inputs, selects, output areas */
+input, select, #output, #report {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #fff;
+    transition: all .3s ease-in-out;
+}
+
+input:hover, input:focus, select:hover, select:focus {
+    background-color: #dfe4ea;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary {
+    background: linear-gradient(to right, #0d9488, #14b8a6);
+    border: none;
+    transition: all .3s ease-in-out;
+    font-size: 1.1rem;
+    padding: 12px 30px;
+    border-radius: 30px;
+    min-width: 180px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(20, 184, 166, 0.3);
+    font-weight: 600;
+}
+
+.btn-secondary {
+    background: linear-gradient(to right, #6c757d, #6c757d);
+    border: none;
+    transition: all .3s ease-in-out;
+    font-size: 1.1rem;
+    padding: 12px 30px;
+    border-radius: 30px;
+    min-width: 180px;
+    text-align: center;
+}
+
+.btn-action {
+    background: rgba(40, 40, 40, 0.8);
+    border: 1px solid rgba(20, 184, 166, 0.5);
+}
+
+.btn:hover {
+    opacity: 0.9;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.agent-question {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+}
+
+footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    background: rgba(18, 18, 18, 0.8);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(20, 184, 166, 0.3);
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #2dd4bf;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+footer a:hover {
+    color: #14b8a6;
+    text-decoration: underline;
+}
+
+.margin-div {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 25px;
+    background-color: rgba(20, 20, 28, 0.8);
+    border-radius: 16px;
+    border: 1px solid rgba(100, 100, 130, 0.2);
+    transition: all 0.3s ease;
+}
+
+.research-output-container, .report-container {
+    position: relative;
+}
+
+.research-output-container h2, .report-container h2 {
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+    border-bottom: 2px solid rgba(20, 184, 166, 0.3);
+    padding-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Explicitly override any icon that might be added before the h2 */
+.research-output-container h2::before {
+    content: none !important;
+    display: none !important;
+}
+
+.images_div {
+    padding: 0 25px 0 25px;
+}
+
+.agent_response {
+    background-color: #747d8c;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 12px;
+    animation: fadeIn 0.5s ease;
+}
+
+.sub-questions {
+    margin: 10px;
+    padding: 12px 16px;
+    border-radius: 12px;
+    background-color: rgba(152, 103, 240, 0.12);
+    border: 1px solid rgba(152, 103, 240, 0.25);
+    animation: fadeIn 0.5s ease;
+}
+
+.sub-questions-heading {
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    font-size: 0.95rem;
+}
+
+.sub-questions-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.sub-question-pill {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid rgba(193, 193, 193, 0.4);
+    background-color: rgba(255, 255, 255, 0.08);
+    font-size: 0.85rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#output {
+    height: 300px;
+    overflow: auto;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 12px;
+}
+
+#output::-webkit-scrollbar {
+    width: 8px;
+}
+
+#output::-webkit-scrollbar-track {
+    background: rgba(60, 60, 60, 0.7);
+    border-radius: 10px;
+}
+
+#output::-webkit-scrollbar-thumb {
+    background-color: #14b8a6;
+    border-radius: 10px;
+}
+
+#report {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 18px !important;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    transition: all .3s ease-in-out;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+#report h1,
+#report h2,
+#report h3 {
+    color: #FFFFFF;
+}
+
+#report a {
+    color: #2dd4bf;
+    text-decoration: none;
+}
+
+#report a:hover {
+    text-decoration: underline;
+}
+
+#report blockquote {
+    border-left: 3px solid #14b8a6;
+    padding-left: 15px;
+    color: #B8B8B8;
+    font-style: italic;
+}
+
+#report table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0;
+    overflow-x: auto;
+    display: block;
+}
+
+#report th,
+#report td {
+    border: 1px solid #444;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+#report th {
+    background-color: rgba(255, 255, 255, 0.08);
+    font-weight: bold;
+}
+
+#report tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+
+/* Adaptation for Deep Researcher: same original layout, backend-compatible controls. */
+*{box-sizing:border-box}body{margin:0;font-family:Montserrat,-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif}a{color:inherit}.landing{min-height:560px;height:calc(90vh - 40px)}.landing-inner{max-width:1050px;width:100%}.landing h1{line-height:1.25;letter-spacing:-1.5px}.original-gradient{background-image:linear-gradient(to right,#9867F0,#ED4E50);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent}.landing p{color:#bdc3d3;font-size:19px;line-height:1.9}.brand-label{color:#2dd4bf;font-size:14px;letter-spacing:2px;margin-bottom:24px}.container{width:min(100% - 40px,960px);padding:32px;margin-bottom:80px}.brand-form{text-align:center;color:#2dd4bf;font-weight:700;font-size:22px;margin-bottom:26px}.form-group{margin:22px 0}.agent-question{display:block;margin-bottom:12px}textarea{display:block;width:100%;min-height:125px;resize:vertical;padding:16px;background:rgba(255,255,255,.09);color:white;border:1px solid rgba(255,255,255,.18);border-radius:12px;font:inherit;line-height:1.7}textarea::placeholder{color:#9da9bc}textarea:focus{outline:2px solid #14b8a6;outline-offset:2px}.btn{display:inline-block;cursor:pointer;font:inherit;text-decoration:none;color:white}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}.btn-secondary{min-width:100px}.btn:disabled{opacity:.45;cursor:not-allowed;transform:none}.hint{font-size:13px;color:#a7b0c3;line-height:1.8}.status-line{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.badge{background:rgba(20,184,166,.15);color:#2dd4bf;border-radius:25px;padding:6px 13px;font-size:13px}.badge[data-state=failed]{color:#ffacb3;background:#8c303733}.badge[data-state=completed]{color:#70e4b3}.badge[data-state=running]{color:#2dd4bf}#step{color:#bdc6d8;font-size:14px}#taskId{font:11px monospace;color:#919caf;overflow-wrap:anywhere}#error{color:#ffb3b8;background:#862f3426;padding:13px;border-radius:10px;white-space:pre-wrap;overflow-wrap:anywhere}#error:empty{display:none}.report-heading{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}.report-heading h2{margin:0}.report-heading .actions{margin:0}.report-action{border:1px solid #14b8a650;border-radius:9px;background:rgba(255,255,255,.04);color:#2dd4bf;padding:9px 14px;font:inherit;font-size:13px;cursor:pointer}.report-action:disabled{opacity:.4;cursor:not-allowed}#empty{padding:45px 20px;color:#aeb7ca;text-align:center}#report{padding:20px 0 0;overflow-wrap:anywhere;line-height:1.85}#report h1{font-size:29px}#report h2{font-size:24px;margin-top:30px}#report h3{font-size:20px;margin-top:25px}#report pre{background:#080c1880;overflow:auto;padding:16px;border-radius:10px;color:#d6deef}#report code{font:13px/1.8 monospace}#report p{margin:14px 0}.table-scroll{overflow-x:auto}#report table{display:table;font-size:14px}#report td,#report th{min-width:110px}.nav-buttons{position:absolute;top:24px;right:30px;display:flex;gap:12px}.nav-link{font-size:13px;text-decoration:none;color:#2dd4bf;border:1px solid #14b8a645;border-radius:30px;padding:7px 16px;background:#14b8a61a}button:focus-visible,a:focus-visible{outline:2px solid #2dd4bf;outline-offset:4px}[hidden]{display:none!important}footer p{color:#a7b0c3}@media(max-width:650px){.landing{min-height:510px;height:auto;padding-top:90px;padding-bottom:70px}.landing h1{font-size:2.5rem}.landing p{font-size:16px;padding:0}.container{width:calc(100% - 24px);padding:20px}.margin-div{padding:18px}.agent-question{font-size:1.15rem}.nav-buttons{right:18px}.report-heading{align-items:flex-start}.research-output-container h2,.report-container h2{font-size:1.5rem}.btn-primary{min-width:150px}#report{font-size:16px!important}}@media(prefers-reduced-motion:reduce){html,body{animation:none;scroll-behavior:auto}*{transition:none!important}}
+
+/* Compact workspace: the introductory landing section has been removed. */
+.container{margin-top:48px} @media(max-width:650px){.container{margin-top:38px}}

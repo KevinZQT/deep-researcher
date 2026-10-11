@@ -1,0 +1,18 @@
+from pydantic import BaseModel, Field
+
+class SearchQuery(BaseModel):
+
+    query: list[str] = Field(
+        description="A list of search queries to be used for web research."
+    )
+
+class ReflectionOutput(BaseModel):
+    is_sufficient: bool = Field(
+        description="Whether the provided summaries are sufficient to answer the user's question."
+    )
+    knowledge_gap: str = Field(
+        description="A description of what information is missing or needs clarification."
+    )
+    follow_up_queries: list[str] = Field(
+        description="A list of follow-up queries to address the knowledge gap."
+    )

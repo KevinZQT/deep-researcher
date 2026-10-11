@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Your personal AI research assistant">
+  <title>Deep Researcher</title>
+  <link rel="stylesheet" href="/frontend/styles.css">
+</head>
+<body>
+  <nav class="nav-buttons" aria-label="Page navigation">
+    <a class="nav-link" href="#researchForm">New research</a>
+    <a class="nav-link" href="#researchProgress">Research status</a>
+  </nav>
+
+  <!-- Source layout: one glass form, then vertically stacked progress/report panels. -->
+  <main class="container" id="researchForm">
+    <div class="brand-form">Deep Researcher</div>
+    <form id="form">
+      <div class="form-group">
+        <label for="topic" class="agent-question">What would you like to research next?</label>
+        <textarea id="topic" placeholder="Enter a topic, question, or idea…" required maxlength="10000"></textarea>
+      </div>
+      <div class="actions">
+        <button type="submit" id="start" class="btn btn-primary">Start research →</button>
+        <button type="button" id="cancel" class="btn btn-secondary" disabled>Cancel research</button>
+      </div>
+      <p class="hint">Research may take a few minutes. Copy or download your report when it is ready.</p>
+    </form>
+
+    <section class="margin-div research-output-container" id="researchProgress">
+      <h2>Research progress</h2>
+      <div class="status-line"><span id="status" class="badge" data-state="idle" role="status">Ready</span></div>
+      <p id="step" aria-live="polite">Waiting for a research topic</p>
+      <p id="taskId"></p>
+      <p id="error" role="alert"></p>
+    </section>
+
+    <section class="margin-div report-container">
+      <div class="report-heading">
+        <h2>Research report</h2>
+        <div class="actions">
+          <button id="copy" class="report-action" disabled>Copy report</button>
+          <button id="download" class="report-action" disabled>Download Markdown</button>
+        </div>
+      </div>
+      <div id="empty">Your report will appear here when the research is complete.</div>
+      <article id="report" hidden></article>
+    </section>
+  </main>
+  <footer><p>Deep Researcher · Your personal research assistant</p></footer>
+  <script src="/frontend/markdown.js" defer></script>
+  <script src="/frontend/scripts.js" defer></script>
+</body>
+</html>

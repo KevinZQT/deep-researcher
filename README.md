@@ -14,7 +14,7 @@ Together, these components aim to produce detailed, well-structured, and evidenc
 
 
 
-## Researcher Workflow
+#### Researcher Workflow
 
 ```mermaid
 flowchart TD
@@ -49,7 +49,7 @@ flowchart TD
     class OUT output;
 ```
 
-## ChiefAgent Workflow
+#### ChiefAgent Workflow
 
 ```mermaid
 flowchart TD

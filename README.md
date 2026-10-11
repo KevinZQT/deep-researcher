@@ -91,8 +91,6 @@ flowchart TD
 
 Requires Python 3.12 and a Gemini API key.
 
-Name the local project folder `deep_researcher` and run the setup commands from that directory.
-
 ## Setup
 
 Create and activate a virtual environment, then install the dependencies:

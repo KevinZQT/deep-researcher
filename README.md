@@ -19,7 +19,7 @@ A multi-agent research application built with LangGraph, Gemini and Google Searc
 The browser frontend submits a topic to FastAPI and polls for progress and the completed report. ChiefAgent coordinates the report workflow, while the reusable Researcher graph performs web research for the initial topic and individual sections. Gemini generates and reviews content; the Google GenAI SDK provides Google Search grounding.
 
 <p align="center">
-  <img src="docs/images/main_workflow.png" alt="Deep Researcher workflow" width="750"/>
+  <img src="docs/images/main_workflow.png" alt="Deep Researcher workflow" width="450"/>
 </p>
 
 
@@ -53,7 +53,7 @@ The fact checker performs a consistency check against collected research. It doe
 `researcher/graph.py` implements a reusable search-and-reflection workflow. Generated queries are dispatched in parallel. Reflection identifies missing information and can send follow-up queries directly to web search.
 
 <p align="center">
-  <img src="docs/images/researcher_subgraph.png" alt="Deep Researcher workflow" width="650"/>
+  <img src="docs/images/researcher_subgraph.png" alt="Deep Researcher workflow" width="450"/>
 </p>
 
 
